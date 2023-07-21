@@ -445,19 +445,137 @@ button{
   width: 395px;
 }
 
+.questions__inner{
+  grid-template-columns: 400px auto;
+}
 
+.accordeon__item{
+  background-color: #FAFAFA;
+  margin-bottom: 10px;
+}
 
+.accordeon__title{
+  font-family: Yeseva One;
+  font-size: 16px;
+  display: block;
+  background-color: transparent;
+  padding: 16px 50px 16px 13px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
 
+.accordeon__title::after{
+  content: "";
+  background-image: url(../images/arrow.svg);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 26px;
+  top: 17px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+.accordeon__title.accordeon__title--active::after{
+  transform: rotate(180deg);
+}
 
+.accordeon__text{
+  opacity: 0;
+  max-height: 0;
+  transition: opacity .3s, max-height .3s;
+}
 
+.accordeon__text ol{
+  padding: 20px 40px;
+}
 
+.accordeon__text.accordeon__text--visible{
+  opacity: 1;
+}
 
+.promo{
+  background-image: url(../images/promo-img.jpg);
+  padding: 140px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
+.promo__inner{
+  display: flex;
+  align-items: center;
+}
 
+.promo__text{
+  font-family: Yeseva One;
+  font-size: 40px;
+  color: #FFF;
+  padding-left: 56px;
+  max-width: 860px;
+  margin-right: 110px;
+}
 
+.promo__link{
+  color: #272727;
+  background-color: #FFBD59;
+  display: inline-block;
+  padding: 12px 25px;
+  min-width: 135px;
+}
 
+.contacts{
+  padding: 150px 0 50px;
+}
 
+.contacts__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form{
+  background-color: #fff;
+  width: 664px;
+  height: 440px;
+  padding: 75px 42px 67px;
+  margin-right: 50px;
+}
+
+.form__title{
+  margin-bottom: 45px;
+}
+
+.form__input{
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  color: #000;
+}
+
+.form__input::placeholder{
+  color: #B3B3B3;
+  font-family: Comfortaa;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form__btn{
+  background-color: #FFBD59;
+  font-family: Comfortaa;
+  font-size: 14px;
+  color: #272727;
+  margin-top: 36px;
+  padding: 17px 34px;
+}
 
 .footer{
   padding-top: 40px;
@@ -482,14 +600,6 @@ button{
   display: flex;
   gap: 15px;
 }
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 1150px){
@@ -563,6 +673,18 @@ button{
   }
   .certificates__slider{
     width: 292px;
+  }
+  .form{
+    width: 592px;
+    margin-right: 30px;
+  }
+  .contacts__img{
+    width: 335px;
+    height: 510px;
+  }
+  .promo__link{
+    min-width: 135px;
+    text-align: center;
   }
 }
 
@@ -776,6 +898,32 @@ button{
   .certificates__slider{
     width: 210px;
   }
+  .accordeon__title{
+    font-size: 12px;
+  }
+  .accordeon__title::after{
+    width: 13px;
+    height: 13px;
+  }
+  .promo{
+    padding: 67px 0;
+  }
+  .promo__text{
+    font-size: 15px;
+    margin-right: 60px;
+    padding-left: 0;
+  }
+  .form{
+    width: 440px;
+    height: 277px;
+    padding: 30px 18px 60px 22px;
+    margin-right: 15px;
+  }
+  .contacts__img{
+    width: 187px;
+    height: 285px;
+    object-fit: cover;
+  }
 }
 
 
@@ -816,6 +964,12 @@ button{
     margin-bottom: 50px;
   }.section{
     padding-bottom: 112px;
+  }
+  .certificates{
+    padding-bottom: 30px;
+  }
+  .promo{
+    margin-top: -50px;
   }
 }
 
@@ -905,6 +1059,26 @@ button{
   }
   .certificates__slider{
     width: 215px;
+  }
+  .promo{
+    padding: 42px 0;
+  }
+  .promo__text{
+    padding-left: 40px;
+    margin-right: 0;
+  }
+  .form{
+    margin: 0;
+    width: 460px;
+  }
+  .contacts{
+    padding: 50px 0;
+  }
+  .contacts__img{
+    display: none;
+  }
+  .form__input::placeholder{
+    font-size: 10px;
   }
 }
 
@@ -1044,5 +1218,12 @@ button{
   }
   .team__item-descr{
     font-size: 9.5px;
+  }
+  .accordeon__title{
+    font-size: 10px;
+  }
+  .accordeon__title::after{
+    width: 10px;
+    height: 10px;
   }
 }
