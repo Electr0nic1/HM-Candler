@@ -25,7 +25,7 @@ const accordeon = document.querySelector('.accordeon');
 const accordeonTitles = accordeon.querySelectorAll('.accordeon__title');
 
 accordeonTitles.forEach.call(accordeonTitles, function (accordeonTitle) {
-  accordeonTitle.addEventListener('click', function() {
+  accordeonTitle.addEventListener('click', function () {
 
     const currentText = accordeonTitle.parentElement.querySelector('.accordeon__text');
 
